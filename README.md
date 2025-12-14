@@ -1,4 +1,4 @@
-it is the revision of the .NET MVC one.
+It is the revision of the .NET MVC one.
 
 a) First day, I start with setting up the application. 
 b) I install .NET MVC application and for the clean architecture, I install 3 other class Libary namely Domain, Application and Infrastructure.
