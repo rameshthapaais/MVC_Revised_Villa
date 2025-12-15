@@ -1,0 +1,63 @@
+﻿@model Villa.Domain.Entities.Villia
+
+@{
+    ViewData["Title"] = "Create Villa";
+}
+
+<div class="w-100 card border-0 p-4">
+    <div class="card-header bg-success bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Create new Villa </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body border p-4">
+  
+    <form asp-action="Create" method="post">
+        <div class="form-group mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="Location" class="form-label"></label>
+            <input asp-for="Location" class="form-control" />
+            <span asp-validation-for="Location" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="Description" class="form-label"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="PricePerNight" class="form-label"></label>
+            <input asp-for="PricePerNight" class="form-control" />
+            <span asp-validation-for="PricePerNight" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="NumberOfBedrooms" class="form-label"></label>
+            <input asp-for="NumberOfBedrooms" class="form-control" />
+            <span asp-validation-for="NumberOfBedrooms" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="NumberOfBathrooms" class="form-label"></label>
+            <input asp-for="NumberOfBathrooms" class="form-control" />
+            <span asp-validation-for="NumberOfBathrooms" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3 form-check">
+            <label asp-for="HasSwimmingPool" class="form-label "></label>
+            <input asp-for="HasSwimmingPool" class="form-check" />
+            <span asp-validation-for="HasSwimmingPool" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>   
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+
+    </div>
+
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
