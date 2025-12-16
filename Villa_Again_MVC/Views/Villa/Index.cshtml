@@ -1,9 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model IEnumerable<Villa.Domain.Entities.Villia >
-
-<h1>Villa List</h1>
+@model IEnumerable<Villia >
 
 
 <div class="w-100 card border-0 p-4">
@@ -56,7 +54,7 @@
                             <a asp-controller="Villa" asp-action="Edit" asp-route-id="@villa.Id" class="btn btn-primary btn-sm">
                                 <i class="bi bi-pencil-square"></i> Edit
                             </a>
-                            <a asp-controller="Villa" asp-action="" asp-route-id="@villa.Id" class="btn btn-danger btn-sm">
+                            <a asp-controller="Villa" asp-action="Delete" asp-route-id="@villa.Id" class="my-2 btn btn-danger btn-sm">
                                 <i class="bi bi-trash"></i> Delete
                             </a>
                         </td>
@@ -64,6 +62,8 @@
                 }
             </tbody>
         </table>
-        </div>
+
+     
+    </div>
 
 </div>
