@@ -18,6 +18,7 @@ namespace Villa.Infrastructure.Data
 
         public DbSet<Villia> Villas { get; set; }
 
+        public DbSet<VillaNumber> VillaNumbers { get; set; }
         protected override void OnModelCreating (ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -62,6 +63,57 @@ namespace Villa.Infrastructure.Data
                     HasSwimmingPool = false,
                     ImageUrl = "https://example.com/images/city_lights_villa.jpg",
                     CreatedAt = new DateTime(2024,12,14)
+                }
+            );
+
+            modelBuilder.Entity<VillaNumber>().HasData(
+                new VillaNumber
+                {
+                    
+                    VillaNo = 101,
+                    VillaId = 1,
+                    SpecialDetails = "Ocean view from every room.",
+                    
+                },
+                new VillaNumber
+                {
+                    
+                    VillaNo = 102,
+                    VillaId = 1,
+                    SpecialDetails = "Private beach access.",
+                    
+                },
+                new VillaNumber
+                {
+                    
+                    VillaNo = 201,
+                    VillaId = 2,
+                    SpecialDetails = "Fireplace and ski-in/ski-out access.",
+                    
+                },
+                new VillaNumber
+                {
+                    
+                    VillaNo = 202,
+                    VillaId = 2,
+                    SpecialDetails = "Hot tub with mountain views.",
+                    
+                },
+                new VillaNumber
+                {
+                    
+                    VillaNo = 301,
+                    VillaId = 3,
+                    SpecialDetails = "Rooftop terrace with city skyline views.",
+                    
+                },
+                new VillaNumber
+                {
+                    
+                    VillaNo = 302,
+                    VillaId = 3,
+                    SpecialDetails = "Close to major attractions and nightlife.",
+
                 }
             );
         }
