@@ -11,7 +11,7 @@ namespace Villa.Application.Common.Interface
     public interface IVillaRepository
     {
         IEnumerable<Villia> GetAll(Expression<Func<Villia, bool>>? filter = null,string?includeProperties =null);
-        IEnumerable<Villia> Get(Expression<Func<Villia, bool>> filter,string? includeProperties = null);
+        Villia Get(Expression<Func<Villia, bool>> filter,string? includeProperties = null);
 
         void Add(Villia entity);
         void Update(Villia entity);
